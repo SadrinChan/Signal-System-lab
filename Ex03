@@ -18,7 +18,7 @@ subplot(2,3,2);
 plot(t2,x2);
 xlabel('time');
 ylabel('amplitude');
-title('Unit Impulse Signal');
+title('Unit Step Signal');
 
 --%Exponential Signal
 t3=0:1:20;
