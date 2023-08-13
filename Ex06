@@ -13,7 +13,7 @@ subplot(2,2,2),plot(t,x);grid;axis([-3 2 0 5]);
 title('advance ramp signal');xlabel('t');ylabel('amplitude');
 %plot delayed ramp signal
 t=[3:0.01:8];
-x=1*-t;
+x=1*(t-3);
 subplot(2,2,3),plot(t,x);grid;axis([3 8 0 5]);
 title('delayed ramp signal');xlabel('t');ylabel('amplitude');
 %plot folding or time reversal operation
@@ -37,4 +37,6 @@ t=[-6:0.01:6];
 x=2*rectpuls(1/2*t,4);
 subplot(3,1,3),plot(t,x,'r');grid;
 title('expanded signal');xlabel('t');ylabel('amplitude');
+
+
 
