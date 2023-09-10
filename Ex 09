@@ -2,7 +2,7 @@ Ex name: Find fourier transform of a given signal
 code:
 
 
-
+sin(0:0.1:10)
 
 
 
