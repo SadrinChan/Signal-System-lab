@@ -1,0 +1,64 @@
+Ex name: Find fourier transform of a given signal
+code:
+
+%code
+close all;
+clear all;
+clc;
+x1=[2 3 1 0 5 2 -1]
+n1=-2:4
+figure(1)
+subplot(2,1,1)
+stem(n1,x1)
+axis([-4 10 -1 5])
+title('original signal')
+[x2,n2]=shift(x1, n1, -5)
+subplot(2,1,2)
+stem(n2,x2)
+axis([-4 10 -1 5])
+title('Shift Signal using function (-5 units)')
+
+
+
+
+
+
+clc;
+close all;
+clear all;
+x=input('enter the sequence ');
+N=length(x);
+n=0:1:N-1;
+y=fft(x,N)
+subplot(2,1,1);
+stem(n,x);
+title('input sequence');
+xlabel('time index n----->');
+ylabel('amplitude x[n]----->');
+subplot(2,1,2);
+stem(n,y);
+title('Output sequence');
+xlabel('Frequence index k----->');
+ylabel('amplitude x[k]----->');
+
+
+
+
+
+t=0:0.1:(pi*8);
+y=cos(t);
+subplot(5,1,1);
+plot(t,y);
+xlabel('k');
+ylabel('amplituide');
+title('gibbs phenomenon');
+h=2;
+%k=3;
+for k=3:2:9
+    y=y+cos(k*t)/k;
+    subplot(5,1,h);
+    plot(t,y);
+    xlabel('k');
+    ylabel('amplituide');
+    h=h+1;
+end
